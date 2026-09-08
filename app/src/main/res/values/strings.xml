@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">AppLockFP</string>
+    <string name="select_apps_hint">اختر التطبيقات اللي تريد قفلها بالبصمة:</string>
+    <string name="enable_accessibility">تفعيل خدمة المراقبة (Accessibility)</string>
+    <string name="accessibility_service_description">تُستخدم هذه الخدمة فقط لمراقبة أي تطبيق يفتح من أجل عرض شاشة قفل البصمة قبل الدخول إليه.</string>
+    <string name="biometric_ready">البصمة: جاهزة ✔</string>
+    <string name="biometric_not_ready">البصمة: غير مُعدّة على الجهاز — أضف بصمة من إعدادات الجهاز أولاً</string>
+    <string name="accessibility_enabled">خدمة المراقبة: مفعّلة ✔</string>
+    <string name="accessibility_disabled">خدمة المراقبة: غير مفعّلة — اضغط الزر أدناه لتفعيلها</string>
+    <string name="unlock_title">فتح القفل</string>
+    <string name="unlock_subtitle">استخدم بصمتك للمتابعة</string>
+    <string name="cancel">إلغاء</string>
+    <string name="retry_fingerprint">إعادة المحاولة بالبصمة</string>
+    <string name="locked_app_generic">تطبيق مقفل</string>
+    <string name="biometric_unavailable">البصمة غير متاحة على هذا الجهاز أو غير معدّة</string>
+    <string name="biometric_failed_try_again">لم يتم التعرف على البصمة، حاول مرة أخرى</string>
+</resources>
