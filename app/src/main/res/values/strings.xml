@@ -14,4 +14,5 @@
     <string name="locked_app_generic">تطبيق مقفل</string>
     <string name="biometric_unavailable">البصمة غير متاحة على هذا الجهاز أو غير معدّة</string>
     <string name="biometric_failed_try_again">لم يتم التعرف على البصمة، حاول مرة أخرى</string>
+    <string name="settings_locked_title">AppLockFP مقفل</string>
 </resources>
