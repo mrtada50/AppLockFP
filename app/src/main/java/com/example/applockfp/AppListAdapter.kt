@@ -11,6 +11,9 @@ class AppListAdapter(
     private val onToggle: (AppInfo, Boolean) -> Unit
 ) : RecyclerView.Adapter<AppListAdapter.AppViewHolder>() {
 
+    // القائمة الكاملة غير المفلترة
+    private var fullList: List<AppInfo> = emptyList()
+
     inner class AppViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val icon: android.widget.ImageView = view.findViewById(R.id.appIcon)
         val label: android.widget.TextView = view.findViewById(R.id.appLabel)
@@ -29,7 +32,6 @@ class AppListAdapter(
         holder.icon.setImageDrawable(app.icon)
         holder.label.text = app.label
 
-        // تفريغ المستمع قبل ضبط الحالة لتفادي تفعيله أثناء إعادة تدوير العناصر
         holder.lockSwitch.setOnCheckedChangeListener(null)
         holder.lockSwitch.isChecked = app.locked
         holder.lockSwitch.setOnCheckedChangeListener { _: CompoundButton, isChecked: Boolean ->
@@ -39,4 +41,24 @@ class AppListAdapter(
     }
 
     override fun getItemCount(): Int = apps.size
+
+    /** يستدعى عند أول تحميل أو تحديث كامل للقائمة */
+    fun submitFullList(list: List<AppInfo>) {
+        fullList = list
+        apps.clear()
+        apps.addAll(list)
+        notifyDataSetChanged()
+    }
+
+    /** يستدعى عند كل تغيير بنص البحث */
+    fun filter(query: String) {
+        val filtered = if (query.isBlank()) {
+            fullList
+        } else {
+            fullList.filter { it.label.contains(query, ignoreCase = true) }
+        }
+        apps.clear()
+        apps.addAll(filtered)
+        notifyDataSetChanged()
+    }
 }

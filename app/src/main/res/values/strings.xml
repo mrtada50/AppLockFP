@@ -15,4 +15,9 @@
     <string name="biometric_unavailable">البصمة غير متاحة على هذا الجهاز أو غير معدّة</string>
     <string name="biometric_failed_try_again">لم يتم التعرف على البصمة، حاول مرة أخرى</string>
     <string name="settings_locked_title">AppLockFP مقفل</string>
+    <string name="search_hint">بحث عن تطبيق...</string>
+    <string name="enable_device_admin">تفعيل مسؤول الجهاز</string>
+    <string name="device_admin_enabled">مسؤول الجهاز: مفعّل ✔</string>
+    <string name="device_admin_disabled">مسؤول الجهاز: غير مفعّل</string>
+    <string name="device_admin_explanation">تفعيل هذه الميزة يحمي التطبيق ويمنع إزالته بسهولة.</string>
 </resources>
